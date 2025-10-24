@@ -4,22 +4,21 @@
 
 <hibernate-configuration>
         <session-factory>
-        <!-- Conexão com o banco -->
+       
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/gerenciamentodeturma?useSSL=false&amp;serverTimezone=UTC</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password"></property>
 
-        <!-- Dialeto SQL -->
+       
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
 
-        <!-- Criar/atualizar tabelas automaticamente -->
+       
         <property name="hibernate.hbm2ddl.auto">update</property>
 
-        <!-- Mostrar SQL no console -->
+       
         <property name="hibernate.show_sql">true</property>
 
-        <!-- Entidade mapeada -->
-        <mapping class="br.cefet_rj.model.Aluno"/>
+               <mapping class="br.cefet_rj.model.Aluno"/>
     </session-factory>
 </hibernate-configuration>
