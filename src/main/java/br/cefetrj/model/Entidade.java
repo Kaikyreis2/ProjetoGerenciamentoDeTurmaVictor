@@ -8,9 +8,9 @@ public abstract class Entidade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    protected int Id;
+    public int Id;
     
-    protected int getId() {
+    public int getId() {
         return Id;
     }
 

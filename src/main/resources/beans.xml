@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- Repository -->
+    <bean id="alunoRepository" class="br.cefetrj.repository.AlunoRepository" />
+    <bean id="professorRepository" class="br.cefetrj.repository.ProfessorRepository" />
+    <bean id="disciplinaRepository" class="br.cefetrj.repository.DisciplinaRepository" />
+    <bean id="turmaRepository" class="br.cefetrj.repository.TurmaRepository" />
+
+    <bean id="alunoService" class="br.cefetrj.service.AlunoService">
+            <constructor-arg ref="alunoRepository"/>
+    </bean>
+    <bean id="professorService" class="br.cefetrj.service.ProfessorService">
+            <constructor-arg ref="professorRepository"/>
+    </bean>
+    <bean id="disciplinaService" class="br.cefetrj.service.DisciplinaService">
+            <constructor-arg ref="disciplinaRepository"/> 
+    </bean>
+    <bean id="turmaService" class="br.cefetrj.service.TurmaService">
+            <constructor-arg ref="turmaRepository"/>
+    </bean>
+</beans>
